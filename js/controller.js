@@ -33,6 +33,7 @@ function loadFloorplan(floor)
         cache: false,
         success: function (data) {
             $("#floorplan").html(new XMLSerializer().serializeToString(data.documentElement));
+            $("#floorplan").children('svg').addClass("img-fluid");
         }
     });
 }

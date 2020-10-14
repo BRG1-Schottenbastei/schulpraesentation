@@ -3,14 +3,14 @@ $(document).ready(function () {
     if (location.hash != '') {
         var page = location.hash.replace(/^#/, '');
 
-        loadHBS('/views/' + page + '.hbs', 'main', {})
+        loadHBS('views/' + page + '.hbs', 'main', {})
     }
 });
 
 $(window).on('hashchange', function (e) {
     e.preventDefault();
     var page = location.hash.replace(/^#/, '');
-    loadHBS('/views/' + page + '.hbs', 'main', {})
+    loadHBS('views/' + page + '.hbs', 'main', {})
 });
 
 
@@ -29,7 +29,7 @@ function loadHBS(url, rendertoelement, viewdata) {
 function loadFloorplan(floor)
 {
     $.ajax({
-        url: '/'+floor+'.stock.svg',
+        url: floor+'.stock.svg',
         cache: false,
         success: function (data) {
             $("#floorplan").html(new XMLSerializer().serializeToString(data.documentElement));

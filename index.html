@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <!-- Required meta tags -->
@@ -11,20 +11,28 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Hello, world!</title>
+    <title>BRG1 Schottenbastei - Virtuelle Schulführung</title>
 </head>
 
 <body>
     <div class="jumbotron" id="jumbo" style="background-image: url(images/brg1-h.jpg);">
         <div class="container">
-            <h1 class="text-center"><i class="fas fa-graduation-cap"></i> BRG1 Schottenbastei <i
-                    class="fas fa-graduation-cap"></i></h1>
+            <h1 class="text-center">
+                <i class="fas fa-graduation-cap"></i> BRG1 Schottenbastei <i class="fas fa-graduation-cap"></i></h1>
         </div>
     </div>
 
-    <div id="floorplan" class="container">
-
+    <div class="container">
+        <div class="text-center">
+            <a class="btn btn-primary" href="#" onClick="loadFloorplan('tp');return false;">-1 Tiefparterre</a>
+            <a class="btn btn-primary" href="#" onClick="loadFloorplan('e');return false;">0 Erdgeschoß</a>
+            <a class="btn btn-primary" href="#" onClick="loadFloorplan('1');return false;">1. Stock</a>
+            <a class="btn btn-primary" href="#" onClick="loadFloorplan('2');return false;">2. Stock</a>
+            <a class="btn btn-primary" href="#" onClick="loadFloorplan('3');return false;">3. Stock</a>
+        </div>
     </div>
+
+    <div id="floorplan" class="container"></div>
 
     <main class="container"></main>
 

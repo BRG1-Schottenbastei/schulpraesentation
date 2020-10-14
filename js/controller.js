@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    loadFloorplan(3)
+    //loadFloorplan(3)
     if (location.hash != '') {
         var page = location.hash.replace(/^#/, '');
 
@@ -29,7 +29,7 @@ function loadHBS(url, rendertoelement, viewdata) {
 function loadFloorplan(floor)
 {
     $.ajax({
-        url: floor+'.stock.svg',
+        url: 'plans/'+floor+'.stock.svg',
         cache: false,
         success: function (data) {
             $("#floorplan").html(new XMLSerializer().serializeToString(data.documentElement));

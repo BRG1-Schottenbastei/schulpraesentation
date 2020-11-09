@@ -20,7 +20,10 @@ function loadHBS(url, rendertoelement, viewdata) {
         cache: false,
         success: function (data) {
             template = Handlebars.compile(data);
-            $(rendertoelement).html(template(viewdata));
+            var converter = new showdown.Converter(),
+            text      = template(viewdata),
+            html      = converter.makeHtml(text);
+            $(rendertoelement).html(html);
             $(window).scrollTop($(rendertoelement).offset().top);
         }
     });
